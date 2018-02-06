@@ -1,14 +1,12 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from .views.profile import ProfileView
-from .views.user import UserView
+from .views.user import UserView, UserViewSet
+from .views.profile import ProfileView, ProfileViewSet
+from rest_framework.routers import DefaultRouter
 
+router = DefaultRouter()
+router.register(r'accounts', UserViewSet, base_name="account")
 
 urlpatterns = [
-
-    # Profiles
-    url(r'^profiles$', ProfileView.as_view()),
-
-    # Users
-    url(r'^users$', UserView.as_view()),
-
+    url(r'', include(router.urls))
 ]

@@ -4,16 +4,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from rest_framework.documentation import include_docs_urls
 
-
 urlpatterns = [
 
     # Core
     url(r'^admin/', admin.site.urls),
-    url(r'^docs/', include_docs_urls(title='Django REST Boilerplate')),
+    url(r'^docs/', include_docs_urls(title='Django Boilerplate')),
 
     # API (v1)
     url(r'^', include('v1.accounts.urls')),
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

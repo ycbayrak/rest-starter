@@ -1,5 +1,3 @@
-![](http://i.imgur.com/W0vRSh7.png)
-
 ## Django REST Boilerplate
 
 Boilerplate for Django projects using Django REST Framework.
@@ -8,7 +6,7 @@ Boilerplate for Django projects using Django REST Framework.
 
 Install required packages:
 ```
-pip3 install -r requirements/local.txt
+pip install -r requirements/local.txt
 ```
 
 Initialize database:

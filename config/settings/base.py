@@ -1,6 +1,5 @@
 import os
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = '7(ci5&0hu2r5-5@d$)j(9yssw$6+-4t!d4rp=#k&_3)4z-bm07'
 
@@ -51,7 +50,7 @@ AUTH_PASSWORD_VALIDATORS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
