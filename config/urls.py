@@ -3,6 +3,7 @@ from django.urls import include, path, re_path
 
 from django.conf.urls.static import static
 from django.contrib import admin
+
 from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
@@ -11,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('docs/', include_docs_urls(title='Django Boilerplate')),
 
-    # API (v1)
+    # API
     path(r'api/', include('v1.accounts.urls')),
 ]
 
